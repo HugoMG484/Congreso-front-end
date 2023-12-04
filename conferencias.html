@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.min.css" />
+  <title>Conferencias</title>
+  <link rel="stylesheet" href="./css/conferencias.css" />
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <nav>
+    <div>
+      <a href="/index.html">Inicio</a>
+      <a href="/participantes.html">Participantes</a>
+      <a href="/registro.html">Registro</a>
+      <a href="/conferencias.html">Conferencias</a>
+    </div>
+  </nav>
+  <div class="contenedor">
+    <div class="agregar-contenedor">
+      <header>
+        <div class="logo-container">
+          <a href="/index.html"><img src="/img/itl_leon.png" alt="Logo 1" /></a>
+          <h1>Programa de Conferencias</h1>
+          <a href="/index.html"><img src="/img/tic.jpg" alt="Logo 2" /></a>
+        </div>
+      </header>
+
+      <div class="contenido">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Conferencia</th>
+              <th>conferencista</th>
+              <th>Registro</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+
+        <dialog id="Conf_Asistencia">
+          <div id="formularioRegistro">
+            <form id="registroForm">
+              <fieldset>
+                <legend>Registro a conferencias</legend>
+                <label>Conferencia:</label>
+                <label id="conferencia" name="conferencia"></label>
+
+                <br><br>
+
+                <label>Participante:</label>
+                <select id="participante" name="participante" required>
+
+                </select>
+
+                <br><br>
+
+                <label>Confirmar:</label>
+                <br>
+
+                <input type="radio" id="confirmar" name="asistencia" value="1">
+                <label>Si</label>
+
+                <br>
+
+                <input type="radio" id="cancelar" name="asistencia" value="0">
+                <label>No</label>
+
+                <br><br>
+
+                <button type="button" id="botonGuardar">Guardar</button>
+              </fieldset>
+            </form>
+          </div>
+        </dialog>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/fondo.js"></script>
+  <script src="/js/conferencias.js"></script>
+</body>
+
+</html>
