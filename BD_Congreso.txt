@@ -1,0 +1,72 @@
+-- Tabla de participante 
+CREATE TABLE participante (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  nombre varchar(100) NOT NULL,
+  apellidos varchar(100) NOT NULL,
+  email varchar(255) NOT NULL,
+  twitter varchar(100),
+  avatar varchar(100),
+  perfil varchar(100)
+);
+
+-- Tabla de conferencias
+CREATE TABLE conferencia (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  horario varchar(100) NOT NULL,
+  nombre varchar(100) NOT NULL,
+  conferencista varchar(100) NOT NULL,
+  registro varchar(255)
+);
+
+-- Tabla intermedia para las inscripciones
+CREATE TABLE inscripcion (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  participante_id int FOREIGN KEY REFERENCES participante(id),
+  conferencia_id int FOREIGN KEY REFERENCES conferencia(id),
+  confirmacion_asistencia bit,
+  acepta_terminos_condiciones bit,
+  UNIQUE(participante_id, conferencia_id)
+);
+
+USE Congreso;
+-- Insertar registros de participantes
+INSERT INTO participante (nombre, apellidos, email, twitter, avatar, perfil)
+VALUES
+  ('Juan', 'Pérez', 'juan@example.com', '@juanperez', 'avatar1.png', 'Desarrollador'),
+  ('María', 'Gómez', 'maria@example.com', '@mariagomez', 'avatar2.png', 'Diseñador'),
+  ('Carlos', 'López', 'carlos@example.com', '@carloslopez', 'avatar3.png', 'Ingeniero'),
+  ('Ana', 'Ramírez', 'ana@example.com', '@anaramirez', 'avatar3.png', 'Estudiante'),
+  ('Pedro', 'Hernández', 'pedro@example.com', '@pedrohernandez', 'avatar3.png', 'Analista'),
+  ('Laura', 'Martínez', 'laura@example.com', '@lauramartinez', 'avatar2.png', 'Gerente'),
+  ('Diego', 'Díaz', 'diego@example.com', '@diegodiaz', 'avatar1.png', 'Consultor'),
+  ('Sofía', 'Torres', 'sofia@example.com', '@sofiatorres', 'avatar1.png', 'Desarrollador Web'),
+  ('Miguel', 'Ruiz', 'miguel@example.com', '@miguelruiz', 'avatar2.png', 'Ingeniero de Datos'),
+  ('Carmen', 'Fernández', 'carmen@example.com', '@carmenfernandez', 'avatar3.png', 'Diseñador UX');
+
+-- Insertar registros de conferencias
+INSERT INTO conferencia (horario, nombre, conferencista, registro)
+VALUES
+  ('2023-01-15 09:00', 'Introducción a la Programación', 'Ana Martínez', 'registro1'),
+  ('2023-01-15 11:00', 'Desarrollo Web Moderno', 'Carlos Rodríguez', 'registro2'),
+  ('2023-01-16 10:30', 'Inteligencia Artificial en la Práctica', 'Luis Díaz', 'registro3'),
+  ('2023-01-16 14:00', 'Diseño de Experiencia de Usuario', 'Sofía Hernández', 'registro4'),
+  ('2023-01-17 13:45', 'Ciberseguridad para Principiantes', 'Alejandro López', 'registro5'),
+  ('2023-01-17 16:30', 'Programación Reactiva con RxJS', 'Juan Pérez', 'registro6'),
+  ('2023-01-18 11:30', 'Desarrollo Ágil con Scrum', 'Elena Fernández', 'registro7'),
+  ('2023-01-18 15:15', 'Python: Más Allá de lo Básico', 'María Gómez', 'registro8'),
+  ('2023-01-19 12:45', 'Blockchain y Criptomonedas', 'Pedro García', 'registro9'),
+  ('2023-01-19 14:30', 'Machine Learning Aplicado', 'Laura Martínez', 'registro10');
+
+-- Insertar registros de inscripciones
+INSERT INTO inscripcion (participante_id, conferencia_id, confirmacion_asistencia, acepta_terminos_condiciones)
+VALUES
+  (1, 5, 0, 1),
+  (2, 2, 1, 1),
+  (3, 1, 1, 1),
+  (4, 3, 1, 1),
+  (5, 4, 1, 1),
+  (6, 7, 1, 1),
+  (7, 8, 1, 1),
+  (8, 9, 1, 1),
+  (9, 10, 0, 1),
+  (10, 6, 0, 1);

@@ -1,0 +1,248 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para el fondo de partículas (posiblemente para un efecto visual) */
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+/* Estilos para un contenedor general */
+.contenedor {
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    opacity: 85%;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #3498db;
+    padding: 25px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    color: #98d6ff;
+    text-decoration: none;
+    padding: 0px 20px;
+    margin: -20px 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Estilos para el campo de texto */
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 5px solid #ffffff;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+input[type=text]:focus {
+    border: 5px solid #555;
+}
+
+/* Estilos para el encabezado central */
+header {
+    background-color: #3498db;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Estilos para el contenedor de la imagen del logo */
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+/* Estilos para el contenedor de la imagen de avatar */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Estilos para el encabezado central */
+.encabezado {
+    text-align: center;
+    background-color: #3498db;
+    color: #ffffff;
+    border-bottom: 1px solid #2980b9;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+}
+
+/* Estilos para el enlace de Twitter */
+.twitter {
+    color: #3498db;
+    margin-top: 10px;
+}
+
+/* Estilos para el texto de perfil profesional */
+.perfil-profesional {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* Estilos para el contenido principal */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid #3498db;
+    margin: 0 auto;
+    max-height: 70vh;
+    max-width: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3498db #f2f2f2;
+}
+
+/* Estilos para el formulario de edición */
+#formularioEdicion {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#formularioEdicion label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#formularioEdicion .check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#formularioEdicion .check label {
+    margin-right: 45%;
+    white-space: nowrap;
+    color: #3498db;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#formularioEdicion .check label:hover {
+    color: #2980b9;
+}
+
+#formularioEdicion input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#formularioEdicion input:focus {
+    border: 3px solid #3498db;
+}
+
+#formularioEdicion button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+#formularioEdicion button:hover {
+    background-color: #ffffff;
+    color: #3498db;
+    border: 1px solid #3498db;
+}
+
+/* Estilos para el grupo de avatares */
+.avatar-group {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+
+.avatar-group img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Estilos para el grupo de radio buttons */
+.radio-group {
+    display: inline-block;
+    text-align: center;
+}
+
+#avatar1,
+#avatar2,
+#avatar3 {
+    margin-left: 0px;
+}
+
+/* Estilos para el grupo de checkboxes */
+.check {
+    width: 100%;
+    text-align: right;
+    margin: 0 0 2em 0;
+}
+
+.check label {
+    margin-left: auto;
+}
+
+/* Estilos para el tooltip (cursor pointer) */
+.tooltip {
+    cursor: pointer;
+}
